@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tugas Mandiri Nomor 1</title>
+</head>
+<body>
+    <h2 align="center">Form Pilihan Mahasiswa</h2><hr>
+
+    <form>
+        <p>Jenis Kelamin:</p>
+        <input type="radio" name="jk" value="Laki-Laki"> Laki-Laki
+        <input type="radio" name="jk" value="Perempuan"> Perempuan
+        <br><br>
+
+        <p>Pilih Jurusan:</p>
+        <select name="jurusan">
+            <option>Teknik Komputer</option>
+            <option>Teknik Informatika</option>
+            <option>Sistem Informasi</option>
+        </select>
+        <br><br>
+
+        <p>Pesan:</p>
+        <textarea name="pesan" rows="4" cols="30"></textarea>
+        <br><br>
+
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+    </form>
+
+    <hr>
+    <h2 align="center">Implementasi Frame</h2>
+
+    <h3>Frame Horizontal</h3>
+    <table border="1" width="100%" height="200">
+        <tr>
+            <td height="100" bgcolor="lightblue" align="center">Bagian Atas</td>
+        </tr>
+        <tr>
+            <td height="100" bgcolor="lightgreen" align="center">Bagian Bawah</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <h3>Frame Vertikal</h3>
+    <table border="1" width="100%" height="200">
+        <tr>
+            <td width="50%" bgcolor="pink" align="center">Bagian Kiri</td>
+            <td width="50%" bgcolor="orange" align="center">Bagian Kanan</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <h3>Frame Gabungan H-V</h3>
+    <table border="1" width="100%" height="250">
+        <tr>
+            <td colspan="2" height="80" bgcolor="yellow" align="center">Header</td>
+        </tr>
+        <tr>
+            <td width="50%" bgcolor="lightblue" align="center">Bagian Kiri</td>
+            <td width="50%" bgcolor="lightgreen" align="center">Bagian Kanan</td>
+        </tr>
+    </table>
+</body>
+</html>
