@@ -38,6 +38,40 @@
       color: #333;
       font-weight: bold;
     }
+    nav ul li {
+      position: relative;
+      display: inline-block;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      padding: 10px 20px;
+      display: block;
+    }
+    nav ul li ul.dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #f4f7f6;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      min-width: 180px;
+    }
+
+    nav ul li ul.dropdown li {
+      display: block;
+    }
+
+    nav ul li ul.dropdown li a {
+      padding: 10px 15px;
+      font-weight: normal;
+    }
+
+    nav ul li:hover ul.dropdown {
+      display: block;
+    }
     section {
       padding: 60px 10%;
     }
@@ -131,15 +165,22 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <h2>Hello</h2>
     <nav>
       <ul>
+        <li>
+        <a href="#">Menu⬇️</a>
+        <ul class="dropdown">
         <li><a href="#tentang">Tentang</a></li>
         <li><a href="#pendidikan">Pendidikan</a></li>
         <li><a href="#skill">Skill</a></li>
         <li><a href="#kontak">Sosial Media</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        </li>
       </ul> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     </nav>
@@ -217,7 +258,6 @@
     </div>
   </div>
 </section>
-
   <footer>
     © 2025 Muh. Irham Praditya -Dibuat menggunakan HTML dan CSS
   </footer>
