@@ -1,6 +1,8 @@
-<h2>Analisa program Navbar foto dan Linkedin </h2>
+<h1>Analisa program Navbar foto dan Linkedin </h1>
 
+<h3>link tugas linkedin </h3>
 https://www.linkedin.com/posts/muh-irham-praditya-300517381_activity-7373396089233784832-n03p?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF46DfABVA_aB-6pcG2Vsu14IUpypifmmYg
+
 
 <hr>
 
