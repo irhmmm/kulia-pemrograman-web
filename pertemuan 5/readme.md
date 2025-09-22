@@ -5,7 +5,7 @@
 Output:<br>
 Gambar 1
 
-![alt text](image.png)
+ ![](imgOutput/1.tag.png)
 
 analisis:
 1. Tag `<script language="JavaScript">` digunakan untuk menandai bahwa bagian ini adalah kode JavaScript.<br>
@@ -20,11 +20,11 @@ Tag `</script>` digunakan untuk menutup bagian JavaScript.
 Output:<br>
 Gambar 1
 
-![alt text](2.eventTertentu.png)
+![](imgOutput/2.eventTertentu.png)
 
 Gambar 2
 
-![alt text](2.evenTertentu2.png)
+![](imgOutput/2.evenTertentu2.png)
 
 Analisis:
 
@@ -42,7 +42,7 @@ Fungsi ini menggunakan `document.getElementById("hasil").innerHTML = ...` untuk 
 Output:<br>
 Gambar 1
 
-![alt text](3.contohSederhana.png)
+![](imgOutput/3.contohSederhana.png)
 
 Analisi:
 1. `Tag <script language="javascript">` digunakan untuk menandai bahwa bagian ini berisi kode JavaScript.
@@ -56,11 +56,11 @@ Analisi:
 Output:<br>
 Gambar 1
 
-![alt text](4.MemasukanData.png)
+![](imgOutput/4.MemasukanData.png)
 
 Gambar 2
 
-![alt text](4.MemasukanDataHasil.png)
+![](imgOutput/4.MemasukanDataHasil.png)
 
 Analisi:
 1. Baris `var nama = prompt("siapa nama anda");`digunakan untuk menampilkan kotak dialog input pada browser. Kotak ini meminta pengguna memasukkan nama mereka. Nilai yang diketik oleh pengguna akan disimpan ke dalam variabel nama.
@@ -72,7 +72,7 @@ Analisi:
 Output:<br>
 Gambar 1
 
-![alt text](5.JendelaPeringatan.png)
+![](imgOutput/5.JendelaPeringatan.png)
 
 Analisis:
 1. Baris `window.alert("apakah anda akan meninggalkan lama ini ?");` memanggil fungsi alert pada objek global window untuk menampilkan kotak dialog peringatan (modal) berisi teks `"apakah anda akan meninggalkan lama ini ?".`<br>
@@ -83,15 +83,15 @@ Kotak dialog ini menghentikan interaksi dengan halaman sampai pengguna menekan t
 Output:<br>
 Gambar 1
 
-![alt text](6.jendalaPeringatan.png)
+![](imgOutput/6.jendalaPeringatan.png)
 
 Gambar 2
 
-![alt text](6.jendalaPeringatanYa.png)
+![](imgOutput/6.jendalaPeringatanYa.png)
 
 Gambar 3
 
-![alt text](6.jendalaPeringatanNo.png)
+![](imgOutput/6.jendalaPeringatanNo.png)
 
 Analisis:
 1. Baris `var jawaban = window.confirm("Apakah anda sudah yakin ?");` menampilkan kotak dialog konfirmasi pada browser. Kotak ini berisi pesan `"Apakah anda sudah yakin ?" dengan dua pilihan tombol, yaitu OK dan Cancel.`
@@ -107,7 +107,7 @@ Analisis:
 Output:<br>
 Gambar 1
 
-![alt text](<7.Deklarasi VAriabel.png>)
+![](imgOutput/7.DeklarasiVAriabel.png)
 
 Analisis:
 1. Baris `var variabelKu;` membuat sebuah variabel bernama variabelKu tanpa memberikan nilai awal. Nilainya masih undefined.
@@ -122,7 +122,7 @@ Baris `document.write(variabelKu * variabelKu2);` menuliskan hasil perkalian ant
 Output:<br>
 Gambar 1
 
-![alt text](8.global.png)
+![](imgOutput/8.global.png)
 
 Analisa:
 1. Baris `var a = 12;` membuat variabel `a` dengan nilai awal 12.
@@ -139,7 +139,7 @@ Di dalam fungsi, `a = b * 2;` menghitung hasil `b` dikali 2 lalu menyimpan hasil
 Output:<br>
 Gambar 1
 
-![alt text](8.lokal.png)
+![](imgOutput/8.lokal.png)
 
 Analisa:
 1. Di dalam fungsi dibuat variabel lokal `a` dengan `var a = b * 2;`. Karena menggunakan `var` lagi, variabel `a` ini hanya berlaku di dalam fungsi, berbeda dengan variabel global `a`. Fungsi lalu mengembalikan hasil perkalian `b * 2.`
@@ -151,7 +151,7 @@ Analisa:
 Output:<br>
 Gambar 1
 
-![alt text](9.konfersiTipeData.png)
+![](imgOutput/9.konfersiTipeData.png)
 
 Analisis:
 1. Baris pertama `var a = parseInt("27");` mengubah string `"27"` menjadi bilangan bulat. Hasilnya adalah 27.
@@ -168,7 +168,7 @@ Analisis:
 Output:<br>
 Gambar 1
 
-![alt text](10.operatorAritmatika.png)
+![](imgOutput/10.operatorAritmatika.png)
 
 Analisis:
 1. Baris pertama menghitung penjumlahan `2 + 3`
@@ -182,15 +182,15 @@ Analisis:
 Output:<br>
 Gambar 1
 
-![alt text](11.operator.png)
+![](imgOutput/11.operator.png)
 
 Gambar 2
 
-![alt text](11.lulus.png)
+![](imgOutput/11.lulus.png)
 
 Gambar 3
 
-![alt text](11.tidakLulus.png)
+![](imgOutput/11.tidakLulus.png)
 
 Analisis:
 1. Baris `var nilai = prompt("Nilai (0-100): ", 0);` menampilkan dialog input untuk meminta pengguna memasukkan nilai antara 0 sampai 100. Nilai yang dimasukkan akan disimpan dalam variabel `nilai`.
@@ -208,11 +208,11 @@ Jika `nilai` kurang dari 60, maka `hasil` berisi `"Tidak Lulus"`.
 Output:<br>
 Gambar 1
 
-![alt text](<tugasMandiri 1.png>)
+![](imgOutput/tugasMandiri1.png)
 
 Gambar 2
 
-![alt text](<Mandiri 1.png>)
+![](imgOutput/Mandiri1.png)
 
 Analisis:
 1. `Baris let a = prompt("masukkan nilai yang ingin dikonversi");` menampilkan kotak input pada browser untuk meminta pengguna mengetik sebuah nilai dalam bentuk string. Nilai yang dimasukkan akan disimpan ke variabel `a`.
@@ -228,19 +228,19 @@ Analisis:
 Output:<br>
 Gambar 1
 
-![alt text](<TugasMandiri 2.png>)
+![](imgOutput/TugasMandiri2.png)
 
 Gambar 2
 
-![alt text](<2 (1).png>)
+![](imgOutput/2(1).png)
 
 Gambar 3
 
-![alt text](<2 (4).png>)
+![](imgOutput/2(4).png)
 
 Gambar 4
 
-![alt text](<2 (3).png>)
+![](imgOutput/2(3).png)
 
 Analisis:
 1. Baris `let a = [];` membuat sebuah array kosong bernama `a`.
@@ -261,22 +261,22 @@ Output:<br>
 Gambar 1<br>
 penambahan
 
-![alt text](<mandiri 3(1).png>)
+![](<imgOutput/tugas mandiri3.png>)
 
 Gambar 2<br>
 pengurangan
 
-![alt text](<mandiri 3(2).png>)
+![](imgOutput/mandiri3(2).png)
 
 Gambar 3<br>
 perkalian
 
-![alt text](<mandiri 3(3).png>)
+![](imgOutput/mandiri3(3).png)
 
 Gambar 4<br>
 Pembagian
 
-![alt text](<mandiri 3(4).png>)
+![](imgOutput/mandiri3(4).png)
 
 Analisis:
 1. Bagian `<input type="number" id="angka1">` dan `<input type="number" id="angka2">` membuat dua kotak input angka yang diisi pengguna.
@@ -297,11 +297,11 @@ Di dalam fungsi `hitung(op)`:
 Output:<br>
 Gambar 1
 
- ![alt text](<Mandiri 4.png>)
+ ![](imgOutput/Mandiri4.png)
 
  Gambar 2
 
- ![alt text](<Mandiri 4(1).png>)
+ ![](imgOutput/Mandiri4(1).png)
 
  Analisis:
  1. `Kubu`s<br>
