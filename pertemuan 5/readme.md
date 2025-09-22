@@ -5,7 +5,7 @@
 Output:<br>
 Gambar 1
 
-![alt text](1.tag.png)
+![alt text](image.png)
 
 analisis:
 1. Tag `<script language="JavaScript">` digunakan untuk menandai bahwa bagian ini adalah kode JavaScript.<br>
@@ -321,4 +321,3 @@ Gambar 1
     `toFixed(2)` membatasi hasil menjadi 2 angka di belakang koma.<br>
     Hasil ditampilkan pada `<p id="hasilBola">`.<br>
 
-    
