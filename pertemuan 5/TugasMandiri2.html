@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tipe Data Dalam Array</title>
+</head>
+<body>
+    <script>
+        let a = [];
+        let input1 = prompt("Masukkan data pertama");
+        let input2 = prompt("Masukkan data kedua");
+        let input3 = prompt("Masukkan data ketiga");
+
+        a.push(input1);
+        a.push(input2);
+        a.push(input3);
+
+        for (let i = 0; i < a.length; i++) {
+            document.write(
+                "Array a index ke-" + i + " adalah " + a[i] + "<br>"
+            );
+        }
+    </script>
+</body>
+</html>

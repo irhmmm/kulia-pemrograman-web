@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perhitungan Bangun Ruang</title>
+</head>
+<body>
+    <h2>Hitung Volume Bangun Ruang</h2>
+
+    <h3>Kubus</h3>
+    <input type="number" id="sisi" placeholder="Masukkan sisi">
+    <button onclick="hitungKubus()">Hitung</button>
+    <p id="hasilKubus"></p>
+
+    <h3>Balok</h3>
+    <input type="number" id="panjang" placeholder="Masukkan panjang">
+    <input type="number" id="lebar" placeholder="Masukkan lebar">
+    <input type="number" id="tinggi" placeholder="Masukkan tinggi">
+    <button onclick="hitungBalok()">Hitung</button>
+    <p id="hasilBalok"></p>
+
+    <h3>Bola</h3>
+    <input type="number" id="jariJariBola" placeholder="Masukkan jari-jari">
+    <button onclick="hitungBola()">Hitung</button>
+    <p id="hasilBola"></p>
+
+    <script>
+        function hitungKubus() {
+            let sisi = parseFloat(document.getElementById("sisi").value);
+            let volume = sisi * sisi * sisi;
+            document.getElementById("hasilKubus").innerHTML = "Volume Kubus = " + volume;
+        }
+
+        function hitungBalok() {
+            let p = parseFloat(document.getElementById("panjang").value);
+            let l = parseFloat(document.getElementById("lebar").value);
+            let t = parseFloat(document.getElementById("tinggi").value);
+            let volume = p * l * t;
+            document.getElementById("hasilBalok").innerHTML = "Volume Balok = " + volume;
+        }
+
+        function hitungBola() {
+            let r = parseFloat(document.getElementById("jariJariBola").value);
+            let volume = (4 / 3) * Math.PI * r * r * r;
+            document.getElementById("hasilBola").innerHTML = "Volume Bola = " + volume.toFixed(2);
+        }
+    </script>
+</body>
+</html>

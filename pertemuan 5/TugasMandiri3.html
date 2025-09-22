@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kalkulator Sederhana</title>
+</head>
+<body>
+  <h2>Kalkulator</h2>
+  <input type="number" id="angka1" placeholder="masukkan angka">
+  <input type="number" id="angka2" placeholder="masukkan angka"><br><br>
+
+  <button onclick="hitung('+')">+</button>
+  <button onclick="hitung('-')">-</button>
+  <button onclick="hitung('*')">*</button>
+  <button onclick="hitung('/')">/</button>
+
+  <h3>Hasil: <span id="hasil"></span></h3>
+
+  <SCRIPT LANGUAGE = "JavaScript">
+    function hitung(op) {
+      let a = parseFloat(document.getElementById("angka1").value);
+      let b = parseFloat(document.getElementById("angka2").value);
+      let hasil = 0;
+
+      if (op === "+") hasil = a + b;
+      else if (op === "-") hasil = a - b;
+      else if (op === "*") hasil = a * b;
+      else if (op === "/") hasil = a / b;
+
+      document.getElementById("hasil").innerText = hasil;
+    }
+  </script>
+</body>
+</html>
