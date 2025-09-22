@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Biodata Saya</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #cef4e7;
+      color: #333;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background: #f4f7f6;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h2 { margin: 0; }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li { display: inline; }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    nav ul li {
+      position: relative;
+      display: inline-block;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      padding: 10px 20px;
+      display: block;
+    }
+    nav ul li ul.dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #f4f7f6;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      min-width: 180px;
+    }
+    nav ul li ul.dropdown li {
+      display: block;
+    }
+    nav ul li ul.dropdown li a {
+      padding: 10px 15px;
+      font-weight: normal;
+    }
+    nav ul li:hover ul.dropdown {
+      display: block;
+    }
+    section {
+      padding: 60px 10%;
+    }
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+    }
+    .profile {
+      flex: 1;
+      max-width: 300px;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .profile img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid #ddd;
+    }
+    .profile h3 { margin: 10px 0 5px; font-size: 22px; }
+    .profile p { font-size: 14px; color: #666; }
+    .profile .social {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    .profile .social a {
+      font-size: 22px;
+      color: #333;
+      transition: color 0.3s;
+    }
+    .profile .social a:hover {
+      color: #2980b9;
+    }
+    .intro {
+      flex: 2;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .intro h1 { font-size: 28px; margin-bottom: 20px; }
+    .intro h1 span { color: #2980b9; }
+    .intro p { font-size: 16px; margin-bottom: 20px; color: #555; }
+    .intro .status { color: green; font-size: 14px; margin-bottom: 20px; }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #2980b9;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    .btn:hover { background: #1f6694; }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      margin-top: 50px;
+    }
+    .section-box {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 40px;
+      margin-bottom: 40px;
+    }
+    .section-box h2 {
+      color: #2980b9;
+      margin-bottom: 20px;
+    }
+    .skills ul {
+      list-style: none;
+      padding: 0;
+    }
+    .skills ul li {
+      background: #eaf6f9;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h2>Hello</h2>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Menu⬇️</a>
+          <ul class="dropdown">
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#pendidikan">Pendidikan</a></li>
+            <li><a href="#skill">Skill</a></li>
+            <li><a href="#kontak">Sosial Media</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </li>
+      </ul> 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="profile">
+      <img src="img/irhamRun.jpg">
+      <h3>Muh. Irham Praditya</h3>
+      <p>Mahasiswa Teknik Komputer<br>Universitas Negeri Makassar</p>
+      <div class="social">
+        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/irhmprdityaa/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/muh-irham-praditya-tekom-e-300517381/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <div class="intro">
+      <p>Hello Guys!</p>
+      <h1>Saya <span>Irham</span>, seorang mahasiswa yang berani <span>bermimpi</span> dan <span>bertindak</span>.</h1>
+      <p class="status">🟢 Jarvis mode ON </p>
+      <!-- Tombol untuk menjalankan JavaScript -->
+      <button id="sayHelloBtn" class="btn">Klik untuk Sapa</button>
+    </div>
+  </section>
+
+  <section id="tentang">
+    <div class="section-box">
+      <h2>🙋 Tentang Saya</h2>
+      <p>Saya adalah mahasiswa Teknik Komputer UNM ...</p>
+    </div>
+  </section>
+
+  <section id="pendidikan">
+    <div class="section-box">
+      <h2>🎓 Pendidikan</h2>
+      <ul>
+        <li>SD Negeri Contoh (2012 - 2018)</li>
+        <li>SMP Negeri Contoh (2018 - 2021)</li>
+        <li>SMA Negeri Contoh (2021 - 2024)</li>
+        <li>Universitas Negeri Makassar - Teknik Komputer (2024 - Sekarang)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skill">
+    <div class="section-box skills">
+      <h2>⚡ Skill</h2>
+      <ul>
+        <li>HTML, CSS</li>
+        <li>C++</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <div class="section-box">
+      <h2>📩 Temukan Saya di</h2>
+      <div class="contact-cards">
+        <div class="card">
+          <h3>Github</h3>
+          <a href="https://github.com/irhmmm" target="_blank">Kunjungi</a>
+        </div>
+        <div class="card">
+          <h3>Instagram</h3>
+          <a href="https://www.instagram.com/irhmprdityaa/" target="_blank">Kunjungi</a>
+        </div>
+        <div class="card">
+          <h3>LinkedIn</h3>
+          <a href="https://linkedin.com/" target="_blank">Kunjungi</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Muh. Irham Praditya - Dibuat menggunakan HTML dan CSS
+  </footer>
+
+  <script>
+    document.getElementById("sayHelloBtn").addEventListener("click", function() {
+      alert("Halo, terima kasih sudah mengunjungi biodata saya!");
+    });
+  </script>
+</body>
+</html>
