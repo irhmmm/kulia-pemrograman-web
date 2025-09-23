@@ -321,3 +321,25 @@ Gambar 1
     `toFixed(2)` membatasi hasil menjadi 2 angka di belakang koma.<br>
     Hasil ditampilkan pada `<p id="hasilBola">`.<br>
 
+<h1>Penambahan JavaScript Pada Biodata</h1>
+
+Kode Program Penambahan JS
+```html
+  <script>
+    document.getElementById("sayHelloBtn").addEventListener("click", function() {
+      alert("Halo, terima kasih sudah mengunjungi biodata saya!");
+    });
+  </script>
+```
+Analisis:
+1. halaman akan mencari sebuah elemen HTML yang punya `id="sayHelloBtn"`. Setelah ditemukan, JavaScript menambahkan perintah agar ketika elemen tersebut diklik oleh pengguna, maka fungsi yang ada di dalamnya akan dijalankan. Fungsi tersebut berisi perintah `alert(...)` yang menampilkan jendela pesan sederhana di browser. Jadi, kalau misalnya ada tombol dengan `id="sayHelloBtn"` di halaman, ketika tombol itu diklik akan langsung muncul kotak dialog yang berisi tulisan “Halo, terima kasih sudah mengunjungi biodata saya!”.<hr>
+
+Output:<br>
+Gambar 1
+
+![](biodataPakaiJS/img/Biodata.png)
+
+Gambar 2
+
+![](biodataPakaiJS/img/Biodata1.png)
+
