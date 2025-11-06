@@ -1,55 +1,40 @@
+<?php include 'koneksi.php'; ?>
+
+
 <?php
-include 'koneksi.php';
-
-if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
-    die("Error: ID tidak valid atau tidak ditemukan.");
-}
-
 $id = $_GET['id'];
-
-$sql = "SELECT * FROM diaries WHERE id = ?";
-$stmt = $mysqli->prepare($sql);
-
-if ($stmt === false) {
-    die("Error saat menyiapkan query: " . $mysqli->error);
-}
-
-$stmt->bind_param("i", $id);
-$stmt->execute();
-$result = $stmt->get_result();
-
-if ($result->num_rows === 0) {
-    die("Catatan dengan ID tersebut tidak ditemukan.");
-}
-
-$row = $result->fetch_assoc();
-$stmt->close();
+$q = mysqli_query($conn, "SELECT * FROM diary WHERE id=$id");
+$d = mysqli_fetch_array($q);
 ?>
 
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Edit Catatan</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<h2>Edit Catatan</h2>
 
-<div class="container">
-    <h2>Edit Catatan</h2>
-    <form action="proses_edit.php" method="post">
-        <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-        
-        <label for="title">Judul:</label><br>
-        <input type="text" id="title" name="title" value="<?php echo htmlspecialchars($row['title']); ?>" required><br><br>
-        
-        <label for="content">Isi Catatan:</label><br>
-        <textarea id="content" name="content" rows="10" required><?php echo htmlspecialchars($row['content']); ?></textarea><br><br>
-        
-        <input type="submit" value="Update Catatan" class="btn">
-        <a href="index.php" class="btn danger">Batal</a>
-    </form>
-</div>
+<form action="" method="POST">
+    <label>Judul</label><br>
+    <input type="text" name="title" value="<?= $d['title']; ?>"><br><br>
 
+    <label>Isi Catatan</label><br>
+    <textarea name="content" rows="5" cols="40"><?= $d['content']; ?></textarea><br><br>
+
+    <button type="submit" name="update">Update</button>
+    <a href="index.php">Kembali</a>
+</form>
+
+<?php
+if(isset($_POST['update'])){
+    $title = $_POST['title'];
+    $content = $_POST['content'];
+
+    mysqli_query($conn, "UPDATE diary SET title='$title', content='$content' WHERE id=$id");
+    echo "<script>alert('Update berhasil');window.location='index.php';</script>";
+}
+?>
 </body>
 </html>

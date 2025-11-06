@@ -1,42 +1,60 @@
-<?php
-include 'koneksi.php';
-$result = $mysqli->query("SELECT * FROM diaries ORDER BY date ASC");
-?>
-
+<?php include 'koneksi.php'; ?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Diary irham  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Diary - Catatan Pribadi</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <header>
-        <h2> Diary irham</h2>
-        <a href="input.php" class="btn">+ Tambah Catatan</a>
-    </header>
-    <hr>
-
-    <?php
-    if ($result->num_rows > 0) {
-        $no = 1;
-        while ($row = $result->fetch_assoc()) {
-            echo "<div class='card'>";
-            echo "<div class='number-circle'>$no</div>";
-            echo "<div class='card-content'>";
-            echo "<h3>" . htmlspecialchars($row['title']) . "</h3>";
-            echo "<p>" . nl2br(htmlspecialchars($row['content'])) . "</p>";
-            echo "<small>Dibuat: " . $row['date'] . "</small><br>";
-            echo "<a href='edit.php?id=" . $row['id'] . "' class='btn'>Edit</a> ";
-            echo "<a href='hapus.php?id=" . $row['id'] . "' class='btn danger' onclick='return confirm(\"Hapus catatan ini?\");'>Hapus</a>";
-            echo "</div></div>";
-            $no++;
-        }
-    } else {
-        echo "<p class='text-center'>Belum ada catatan.</p>";
-    }
-    ?>
-</div>
+    <div class="page-wrapper">
+        <h2>📘 Daftar Catatan Pribadi</h2>
+        
+        <div class="content-card">
+            <a href="tambah.php">Tambah Catatan Baru</a>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Judul</th>
+                        <th>Isi Catatan</th>
+                        <th>Tanggal</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $no = 1;
+                    $q = mysqli_query($conn, "SELECT * FROM diary ORDER BY id DESC");
+                    
+                    if (mysqli_num_rows($q) > 0) {
+                        while ($d = mysqli_fetch_array($q)) {
+                    ?>
+                    <tr>
+                        <td><?= $no++; ?></td>
+                        <td><?= htmlspecialchars($d['title']); ?></td>
+                        <td><?= htmlspecialchars(substr($d['content'], 0, 80)); ?><?= strlen($d['content']) > 80 ? '...' : ''; ?></td>
+                        <td><?= date('d M Y H:i', strtotime($d['created_at'])); ?></td>
+                        <td>
+                            <a href="edit.php?id=<?= $d['id']; ?>">Edit</a>
+                            <a href="hapus.php?id=<?= $d['id']; ?>" onclick="return confirm('Yakin ingin menghapus catatan ini?')">Hapus</a>
+                        </td>
+                    </tr>
+                    <?php 
+                        }
+                    } else {
+                    ?>
+                    <tr>
+                        <td colspan="5" style="text-align: center; padding: 40px; color: var(--text-tertiary);">
+                            Belum ada catatan. Mulai menulis catatan pertama Anda!
+                        </td>
+                    </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
