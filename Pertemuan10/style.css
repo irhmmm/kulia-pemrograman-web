@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    overflow-x: hidden;
+    background: #0d0d0d;
+    color: #e8e8e8;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.about {
+    padding: 120px 80px;
+    background: #0d0d0d;
+    color: #e8e8e8;
+    text-align: center;
+    position: relative;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c8a064, transparent);
+}
+
+.about h2 {
+    font-size: 42px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #c8a064;
+    font-weight: 300;
+    font-family: 'Georgia', serif;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 2;
+    max-width: 850px;
+    margin: 0 auto;
+    color: #b8b8b8;
+    font-weight: 300;
+}
+ 
+.coffee-section {
+    position: relative;
+    min-height: 100vh;
+    padding: 120px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('img/background.jpg');
+    background-size: cover;
+    background-position: left center;
+    background-attachment: scroll;
+    overflow: hidden;
+}
+
+.coffee-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c8a064, transparent);
+}
+
+.coffee-section h2 {
+    font-size: 42px;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #c8a064;
+    font-weight: 300;
+    font-family: 'Georgia', serif;
+    position: relative;
+    z-index: 2;
+}
+
+.coffee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.coffee-card {
+    background: rgba(26, 26, 26, 0.6);
+    padding: 50px 40px;
+    text-align: center;
+    border: 1px solid rgba(200, 160, 100, 0.15);
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+.coffee-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(200, 160, 100, 0.4);
+    background: rgba(26, 26, 26, 0.8);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.coffee-icon {
+    font-size: 58px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.coffee-card h3 {
+    font-size: 24px;
+    margin-bottom: 18px;
+    color: #c8a064;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 300;
+    font-family: 'Georgia', serif;
+}
